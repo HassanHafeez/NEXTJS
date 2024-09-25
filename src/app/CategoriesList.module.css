@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&display=swap');
+
+.categoriesContainer {
+  display: flex;
+  flex-direction: column; /* Stack the heading above the list */
+  align-items: center;
+  margin: 20px 0;
+}
+
+.categoriesHeading {
+  margin-top: 25px;
+  font-weight: 600;
+  margin-bottom: 50px;
+  padding-bottom: 10px; /* Adjusted for better spacing */
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  border-bottom: 3px solid #01411c; /* Green line under heading */
+  color: #333; /* Darker text color for better contrast */
+  text-align: center; /* Center align the heading */
+  font-size: 28px; /* Increased font size for prominence */
+  text-transform: uppercase; /* Make text uppercase for emphasis */
+}
+
+.scrollWrapper {
+  display: flex;
+  align-items: center; /* Center the arrows vertically */
+  width: 100%; /* Ensure full width for wrapper */
+}
+
+.categoriesList {
+  display: flex;
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+  padding: 10px;
+  gap: 15px; /* Space between cards */
+}
+
+.categoryLink {
+  text-decoration: none; /* Remove underline */
+}
+
+.categoryCard {
+  position: relative; /* Position relative for potential overlay */
+  background: #000; /* Black background for each card */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 250px; /* Reduced width for each card */
+  height: 150px; /* Reduced height for each card */
+  overflow: hidden; /* Ensure images fit within cards */
+  transition: transform 0.3s, box-shadow 0.3s; /* Animation on hover */
+}
+
+.categoryCard::before {
+  content: ''; /* Add empty content to create the overlay */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.25); /* Black overlay with 25% opacity */
+  transition: opacity 0.3s ease; /* Smooth transition effect */
+  z-index: 1; /* Ensure the overlay appears above the image */
+}
+
+.categoryCard:hover::before {
+  opacity: 0; /* Hide the overlay on hover */
+}
+
+.categoryImage {
+  display: block; /* Ensure image takes full width */
+  height: 100%; /* Ensure image covers the card height */
+  object-fit: cover; /* Maintain aspect ratio */
+  transition: transform 0.3s; /* Smooth transition for zoom effect */
+  z-index: 0; /* Keep the image behind the overlay */
+}
+
+.categoryCard:hover .categoryImage {
+  transform: scale(1.1); /* Scale up the image on hover */
+}
+
+.arrow {
+  background: white;
+  border: none;
+  color: black;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  margin: 0 10px;
+  font-size: 20px;
+}
+
+.arrow:hover {
+  background: transparent; /* Darker blue on hover */
+}

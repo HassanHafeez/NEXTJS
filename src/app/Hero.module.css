@@ -1,0 +1,273 @@
+/* Hero Section */
+.hero {
+  background-image: url('/image.png'); /* Add the image path */
+  background-size: cover;
+  background-position: center;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 1.5rem;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  opacity: 0.9; /* Adjust opacity for better readability */
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text contrast */
+  z-index: 1;
+}
+
+.hero > div {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px; /* Limit the width on larger screens for better alignment */
+  width: 100%; /* Full width on smaller screens */
+}
+
+/* Heading Style */
+.hero h1 {
+  font-size: 1.5rem; /* Base size for small screens */
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  line-height: 1.2;
+  animation: fadeInUp 1s ease-in-out; /* Animation effect */
+  color: #fff; /* Ensure text is visible on all backgrounds */
+}
+
+.roundedBorder {
+  border: 1px solid white; /* Border color */
+  border-radius: 30px; /* Adjust for roundness */
+  padding: 5px 5px; /* Space inside the border */
+  color: white; /* Text color */
+  background-color: transparent; /* No fill color */
+  display: inline-block; /* Ensures the border wraps tightly around the text */
+  line-height: 0.5; /* Adjust line-height for better text alignment */
+  margin-bottom: 1rem; /* Add space below the border text */
+}
+
+/* Paragraph Style */
+.hero p {
+  font-size: 0.7rem; /* Base size for small screens */
+  margin-top: 1rem;
+  font-weight: 300;
+  line-height: 1.6;
+  animation: fadeInUp 1.5s ease-in-out;
+}
+
+/* Button Style */
+.ctaButton {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  margin-top: 2rem;
+  font-size: 1rem; /* Base size for mobile */
+  color: white;
+  background-color: #01411c;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.ctaButton:hover {
+  background-color: #005f40; /* Darker shade on hover */
+  transform: translateY(-3px); /* Lift effect on hover */
+}
+
+/*---------------------------------Media Screen Adjustments----------------------------------------*/
+
+/* Responsive for Specific Screen Sizes */
+
+/* 343px to 405px */
+@media (min-width: 323px) and (max-width: 405px) {
+  .hero h1 {
+    font-size: 1.4rem; /* Smaller font size for small screens */
+    line-height: 1.1;
+    text-align: center; /* Align text to the center */
+  }
+
+  .hero p {
+    font-size: 0.9rem; /* Adjust paragraph size for readability */
+    text-align: center; /* Ensure the paragraph is also centered */
+  }
+
+  .ctaButton {
+    padding: 0.4rem 0.9rem; /* Reduce padding for smaller buttons */
+    font-size: 0.8rem; /* Smaller font size */
+    display: block; /* Ensure button is centered */
+    margin: 1.5rem auto; /* Center button and add some space */
+  }
+}
+
+
+
+/* 405px to 434px */
+@media (min-width: 405px) and (max-width: 434px) {
+  .hero h1 {
+    font-size: 1.5rem; /* Slightly larger for wider screens */
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+
+  .ctaButton {
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem; /* Larger button text for better visibility */
+  }
+}
+
+/* 573px to 778px */
+@media (min-width: 573px) and (max-width: 778px) {
+  .hero h1 {
+    font-size: 2rem; /* Larger font size for medium screens */
+  }
+
+  .hero p {
+    font-size: 1.1rem; /* Larger paragraph text for readability */
+  }
+
+  .ctaButton {
+    padding: 0.75rem 1.5rem;
+    font-size: 1.125rem; /* Standard size for larger buttons */
+  }
+}
+
+/* Larger screens (default styles apply beyond 778px) */
+@media (min-width: 779px) {
+  .hero h1 {
+    font-size: 2.5rem; /* Scale up for larger screens */
+  }
+
+  .hero p {
+    font-size: 1.25rem;
+  }
+
+  .ctaButton {
+    padding: 1rem 2rem;
+    font-size: 1.25rem;
+  }
+}
+
+/*----------------------------------Other Screen Sizes----------------------------------*/
+
+/* Responsive Heading for Small devices (e.g. smartphones) */
+@media (min-width: 576px) {
+  .hero h1 {
+    font-size: 1.8rem; /* Smaller font size */
+  }
+}
+
+/* Responsive Heading for Tablets and Medium screens */
+@media (min-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem; /* Larger size for medium screens */
+  }
+}
+
+/* Responsive Heading for Large screens like desktops */
+@media (min-width: 1024px) {
+  .hero h1 {
+    font-size: 2.5rem; /* Extra large for large screens */
+    line-height: 1.3;
+  }
+}
+
+/* Paragraph adjustments for medium and larger screens */
+@media (min-width: 576px) {
+  .hero p {
+    font-size: 1.0rem; /* Increase size on medium and up screens */
+  }
+}
+
+/* Paragraph adjustments for desktops */
+@media (min-width: 1024px) {
+  .hero p {
+    font-size: 1.5rem; /* Larger for desktop screens */
+  }
+}
+
+/* Button size increase for medium and larger screens */
+@media (min-width: 576px) {
+  .ctaButton {
+    font-size: 1.125rem; /* Increase button text size for medium and larger screens */
+  }
+}
+
+
+@media (min-width: 1030px) and (max-width: 1300px) {
+  .hero h1 {
+    font-size: 3rem; /* Increase the font size for larger screens */
+    line-height: 1.4; /* Maintain line height for readability */
+    text-align: center; /* Ensure text is centered */
+  }
+  
+
+  .hero p {
+    font-size: 1.1rem; /* Reduce paragraph size slightly */
+    line-height: 1.5; /* Maintain good readability */
+    text-align: center; /* Center the paragraph */
+  }
+
+  .ctaButton {
+    padding: 0.6rem 1.2rem; /* Reduce button padding */
+    font-size: 1.0rem; /* Slightly smaller button font size */
+    display: inline-block; /* Keep the button inline */
+    margin-top: 1.5rem; /* Add some margin above the button */
+  }
+
+  .hero {
+    padding: 0 4rem; /* Adjust horizontal padding for larger screens */
+  }
+}
+
+
+
+@media (min-width: 1301px) and (max-width: 2500px) {
+  .hero h1 {
+    font-size: 3.5rem; /* Increase the font size for larger screens */
+    line-height: 1.4; /* Maintain line height for readability */
+    text-align: center; /* Ensure text is centered */
+  }
+  
+
+  .hero p {
+    font-size: 1.1rem; /* Reduce paragraph size slightly */
+    line-height: 1.5; /* Maintain good readability */
+    text-align: center; /* Center the paragraph */
+  }
+
+  .ctaButton {
+    padding: 0.6rem 1.2rem; /* Reduce button padding */
+    font-size: 1.0rem; /* Slightly smaller button font size */
+    display: inline-block; /* Keep the button inline */
+    margin-top: 1.5rem; /* Add some margin above the button */
+  }
+
+  .hero {
+    padding: 0 4rem; /* Adjust horizontal padding for larger screens */
+  }
+}
+
+
+
+
+/* Keyframes for Fade-in Animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
