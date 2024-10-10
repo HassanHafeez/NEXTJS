@@ -7,6 +7,13 @@ import { NAV_LINKS } from "@/app/NAV_LINKS";
 import { Roboto } from 'next/font/google';
 import { Plus_Jakarta_Sans } from 'next/font/google';
 import styles from './Navbar.module.css'; // Import the CSS module
+// import { useDispatch, useSelector } from "react-redux";
+// import { logout } from "../redux/authSlice";
+// import axios from "axios";
+
+//import API from "../constants/apiConfig";
+
+
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   weight: '500',

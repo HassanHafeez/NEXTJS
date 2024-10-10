@@ -9,7 +9,7 @@ const Guide = () => {
       {/* Main container */}
       <div className="w-full max-w-screen-xl px-6 pb-24">
         {/* Header section */}
-        <p className={`uppercase text-sm mb-3 text-green-700 ${styles.fadeInUp}`}>
+        <p className={`uppercase text-sm mb-1 text-green-700 ${styles.fadeInUp}`}>
           We are here for you
         </p>
 
@@ -24,7 +24,7 @@ const Guide = () => {
       </div>
 
       {/* Image section */}
-      <div className="relative w-full max-w-screen-xl">
+      {/* <div className="relative w-full max-w-screen-xl">
         <Image 
           src="/boat.png" 
           alt="Boat" 
@@ -33,25 +33,7 @@ const Guide = () => {
           className="w-full h-auto object-cover object-center 2xl:rounded-3xl"
         />
 
-        {/* Overlay content */}
-        <div className="absolute left-5 top-20 bg-white p-6 md:py-8 md:pl-5 md:pr-7 gap-3 rounded-3xl border shadow-md flex flex-col">
-          <div className="mb-6">
-            <div className="flex justify-between">
-              <p className="text-gray-500 text-sm">PLANS</p>
-              <p className="font-semibold text-green-500 text-sm">. . .</p>
-            </div>
-            <p className="font-bold text-xl mt-2">10 images/month</p>
-            <p className="text-gray-500 text-sm">1000 PKR</p>
-            <p className="font-bold text-xl mt-2">20 images/month</p>
-            <p className="text-gray-500 text-sm">1500 PKR</p>
-            <p className="font-bold text-xl mt-2">50+ images/month</p>
-            <p className="text-gray-500 text-sm">2000 PKR</p>
-            <Link href="/more-plans">
-              <p className="font-semibold text-green-500 text-sm cursor-pointer">See More</p>
-            </Link>
-          </div>
-        </div>
-      </div>
+      </div> */}
     </section>
   );
 };
