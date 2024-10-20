@@ -39,18 +39,18 @@ export default function Navbar() {
         {/* Logo and Heading */}
         <div className="flex items-center space-x-2">
           <Link href="/">
-            <Image src="/logo.png" alt="logo" width={30} height={40} />
+            <Image src="/Logo1.png" alt="logo" width={100} height={100} />
           </Link>
           <Link href="/">
-            <h2 className={plusJakartaSans.className} style={{ fontSize: '20px' }}>
-              Pictures.Pk
+            <h2 className={`${plusJakartaSans.className} font-bold`} style={{ fontSize: '25px' }}>
+              Agri Shop
             </h2>
           </Link>
         </div>
 
         {/* Conditional Rendering */}
         {isSidebarOpen ? (
-          <h1 className={`${styles.navbarHeading} ${plusJakartaSans.className}`}>Picture.PK</h1>
+          <h1 className={`${styles.navbarHeading} ${plusJakartaSans.className}`}>Agri Shop</h1>
         ) : (
           <>
             {/* Navigation links */}
@@ -66,7 +66,7 @@ export default function Navbar() {
 
             {/* Buttons */}
             <div className="hidden lg:flex items-center space-x-4 ml-auto">
-              <button className={styles.flatButton}>Login</button>
+              <button className={styles.flatButton}>Our Services</button>
               <button className={styles.button}>Sign Up</button>
             </div>
           </>
@@ -99,7 +99,7 @@ export default function Navbar() {
         {/* Login and Sign Up Buttons in Sidebar */}
         <div className="mt-6 px-4">
           <Link href="/login">
-            <button className={styles.flatButton} style={{ width: '100%' }}>Login</button>
+            <button className={styles.flatButton} style={{ width: '100%' }}>Our Services</button>
           </Link>
           <Link href="/signup">
             <button className={styles.button} style={{ width: '100%' }}>Sign Up</button>

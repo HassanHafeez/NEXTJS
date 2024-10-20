@@ -4,7 +4,8 @@ import CategoryScroll from "./categoryScroll";
 import Hero from "./Hero";
 import Guide from "./StorySection";
 import CardSwiper from "./Card";
-import PictureSection from "./PictureSection";
+
+import FeatureProduct from "./FeatureProduct";
 
 export default function Main() {
   return (
@@ -12,7 +13,9 @@ export default function Main() {
   {/* <Navbar/> */}
 <Hero/>
 <CategoryScroll/>
-<PictureSection/>
+
+<FeatureProduct/>
+
 <Guide/>
 <Banner/>
 <CardSwiper/>
