@@ -2,7 +2,6 @@
 import React from 'react';
 import Image from 'next/image';
 import BlurFade from "@/components/ui/blur-fade";
-import { Button } from '@/components/ui/button';
 import { useRouter } from 'next/navigation'; // Update import to use next/navigation
 
 // Generate image URLs with dimensions
@@ -51,14 +50,6 @@ function PictureSection() {
       <div className="flex justify-center items-center mt-8 relative">
         {/* White Overlay */}
         <div className="absolute inset-0 bg-white opacity-80"></div>
-
-        {/* Button */}
-        <Button 
-          className="relative z-10 bg-[#01411c] text-gray-50 hover:bg-[#01411c]/90" 
-          onClick={handleSeeMoreClick} // Add click handler
-        >
-          SEE MORE
-        </Button>
       </div>
     </section>
   );
